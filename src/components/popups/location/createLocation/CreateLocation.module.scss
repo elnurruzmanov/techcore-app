@@ -1,0 +1,132 @@
+//import
+@import "../../../../style/colors.scss";
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(227, 33%, 21%, 0.475);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  z-index: 1;
+  padding: 40px;
+}
+
+.popupInner {
+  background: $White;
+  box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.05),
+    2px 2px 15px rgba(0, 44, 175, 0.05);
+  border-radius: 12px;
+  display: block;
+  z-index: 2;
+  max-width: 550px;
+}
+
+.popupHeader {
+  padding: 17px 15px 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $GreyLight;
+}
+
+
+
+.popupContent {
+  padding: 30px 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: $Grey;
+  padding: 10px 16px;
+  border-radius: 4px;
+  border-color: rgba(175, 182, 198, 0.4);
+}
+
+.popupHeaderTitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  line-height: 0px;
+  margin-bottom: 0px;
+}
+
+.popupClose {
+  background-color: transparent;
+  border: none;
+  padding: 3px 5px;
+  cursor: pointer;
+  height: max-content;
+  display: flex;
+  align-items: center;
+}
+
+#form {
+  display: block;
+
+  .nameItem {
+    margin-bottom: 24px;
+
+    input {
+      font-size: 13px;
+      line-height: 20px;
+      color: $Black;
+    }
+  }
+
+  .workweekItem {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 24px;
+
+    .checkboxGroup {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 13px;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  .LeaveQuotaResetBasedOn {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+
+    :global {
+      .ant-form-item-control-input-content {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  }
+}
+
+.buttons {
+  justify-content: flex-end;
+  display: flex;
+  gap: 8px;
+}

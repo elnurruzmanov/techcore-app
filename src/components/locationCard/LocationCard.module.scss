@@ -1,0 +1,111 @@
+@import "../../style/colors.scss";
+
+.LocationCard {
+  box-shadow: 2px 2px 15px rgba(0, 44, 175, 0.05);
+  border: 1px solid #afb6c666;
+  border-radius: 6px;
+  padding: 18px 0px 6px 18px;
+  width: max-content;
+  position: relative;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 140%;
+  color: $Black;
+  margin-bottom: 26px;
+
+  span {
+    margin-left: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 0px;
+    color: $White;
+    background-color: $Blue;
+    padding: 2px 14px;
+    border-radius: 1000px;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 18px;
+
+  span {
+    font-weight: 400;
+    color: $Blue;
+    width: max-content;
+    cursor: pointer;
+  }
+}
+
+.personList {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  li {
+    text-transform: uppercase;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $Blue;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $White;
+    cursor: pointer;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-left: 3px;
+    line-height: 16px;
+    color: $Blue;
+    cursor: pointer;
+  }
+}
+
+.popupButton {
+  position: absolute;
+  top: 12px;
+  right: 20px !important;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0 !important;
+
+  svg {
+    rect {
+      transition: all 0.2s;
+    }
+  }
+
+  &:hover {
+    svg {
+      rect {
+        fill: $Blue10;
+      }
+    }
+  }
+}
+
+

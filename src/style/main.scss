@@ -1,0 +1,192 @@
+@import "fonts.scss";
+@import "reset.scss";
+@import "colors.scss";
+
+body {
+  display: flex;
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  width: 100%;
+}
+
+.App {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.page {
+  padding: 25px 40px;
+}
+
+.button {
+  display: block;
+  min-width: max-content;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.1px;
+  padding: 12px 24px;
+  cursor: pointer;
+  background: $Blue;
+  color: $White;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $BlueDark;
+  }
+
+  &.button-grey {
+    background-color: $Grey;
+  }
+}
+
+.location-card__popup {
+  border: none;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: max-content;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.popup {
+  position: fixed;
+  background-color: #242c4879;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__inner {
+    background: $White;
+    box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.05), 2px 2px 15px rgba(0, 44, 175, 0.05);
+    border-radius: 12px;
+    z-index: 2;
+    position: absolute;
+    // min-height: 264px;
+  }
+
+  &__header {
+    padding: 17px 15px 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $GreyLight;
+
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 120%;
+      line-height: 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__content {
+    padding: 23px 40px;
+  }
+
+  &__close-btn {
+    background-color: transparent;
+    border: none;
+    padding: 3px 5px;
+    cursor: pointer;
+    height: max-content;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.popup__span {
+  position: absolute;
+  min-width: max-content;
+  left: -120px;
+  padding: 5px 5px 5px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.ant-form-item {
+  margin: 0;
+}
+
+.ant-form-item-required {
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: -40px;
+
+  &::after {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    margin-right: 0px !important;
+  }
+}
+
+.ant-checkbox-wrapper + .ant-checkbox-wrapper {
+  margin-left: 0px;
+}
+
+.warning-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-left: 28px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: $Black80;
+  position: relative;
+
+  svg {
+    position: absolute;
+    left: -1px;
+    top: -2px;
+    display: block;
+    margin-top: 4px;
+  }
+}
+
+.policy {
+  padding: 8px 12px;
+  background: #eef7fc;
+  border-radius: 6px;
+  color: $Black;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+
+  a {
+    text-decoration-line: underline;
+    color: $Blue;
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../../style/colors.scss";
+
+.root {
+  position: relative;
+  display: inline-block;
+}
+
+.textInner {
+  position: absolute;
+  z-index: 2;
+  width: 279px;
+  border-radius: 4px;
+  mix-blend-mode: normal;
+  background: rgba(30, 33, 42, 0.8);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.230695);
+  padding: 8px 12px 13px;
+  transform: translateY(-100%);
+  top: -20px;
+  display: none;
+
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 18px;
+  color: $White;
+}
+
+.InfoPopup {
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+
+  &:hover + .textInner {
+    display: block;
+  }
+}

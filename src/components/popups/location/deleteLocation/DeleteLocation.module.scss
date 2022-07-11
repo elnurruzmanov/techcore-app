@@ -1,0 +1,16 @@
+@import "../../../../style/colors.scss";
+
+.button {
+  background-color: red !important;
+  margin-left: auto;
+  margin-top: 11px;
+}
+
+.popupInner {
+  max-width: 460px;
+  min-height: 264px;
+}
+
+.popupContentText {
+  margin-bottom: 10px;
+}

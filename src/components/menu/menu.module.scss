@@ -1,0 +1,95 @@
+@import "../../style/colors.scss";
+
+.menu {
+  background-color: $BackgroundBlue;
+  min-width: 100px;
+  padding: 24px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: 55px;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  max-width: 70px;
+  text-align: center;
+  cursor: pointer;
+
+  p {
+    display: block;
+    color: $Grey;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 120%;
+    transition: color 0.5s;
+  }
+
+  svg path {
+    transition: all 0.5s;
+  }
+
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  &:hover {
+    p {
+      color: $Blue;
+    }
+
+    svg path {
+      fill: $Blue;
+    }
+  }
+
+  &.active {
+    p {
+      color: $Blue;
+    }
+
+    svg path {
+      fill: $Blue;
+    }
+  }
+}
+
+.bell {
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  background-color: $Blue;
+  border-radius: 50%;
+  margin-top: 18px;
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 0;
+    color: white;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../style/colors.scss";
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  img{
+    display: inline-block;
+  }
+
+  ul {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 0;
+
+    li {
+      color: $Blue;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: -0.1px;
+      cursor: pointer;
+      position: relative;
+
+      &:not(:last-child){
+        &::after{
+          content: '';
+          width: 6px;
+          height: 10px;
+          background-image: url(../../assets/images/icons/arrow-rigth-bradcrambs-icon.svg);
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -14px;
+        }
+      }
+    }
+  }
+}
